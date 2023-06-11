@@ -38,6 +38,9 @@
             this.btnAddFlower = new System.Windows.Forms.Button();
             this.btnAddType = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblFlowers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             this.tblFlowers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.tblFlowers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tblFlowers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblFlowers.Location = new System.Drawing.Point(166, 45);
+            this.tblFlowers.Location = new System.Drawing.Point(188, 45);
             this.tblFlowers.Name = "tblFlowers";
             this.tblFlowers.ReadOnly = true;
             this.tblFlowers.Size = new System.Drawing.Size(343, 376);
@@ -141,11 +144,40 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(30, 437);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(44, 13);
+            this.lblSearch.TabIndex = 10;
+            this.lblSearch.Text = "Search:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(83, 434);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(96, 20);
+            this.txtSearch.TabIndex = 11;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(204, 432);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Go";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 450);
+            this.ClientSize = new System.Drawing.Size(556, 462);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAddType);
             this.Controls.Add(this.btnAddFlower);
@@ -178,5 +210,8 @@
         private System.Windows.Forms.Button btnAddFlower;
         private System.Windows.Forms.Button btnAddType;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

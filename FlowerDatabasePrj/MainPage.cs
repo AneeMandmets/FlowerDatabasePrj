@@ -217,5 +217,31 @@ namespace FlowerDatabasePrj
             removableID = tblFlowers.SelectedRows[0].Cells[0].Value.ToString();
             Console.WriteLine(removableID);
         }
+
+        private void search(string name)
+        {
+            DatabaseConnection();
+            try
+            {
+                MySqlCommand search = new MySqlCommand("SELECT * FROM nimi WHERE nimi LIKE '%%" + name + "%%'", conn);
+                search.CommandType = CommandType.Text;
+                MySqlDataAdapter sda = new MySqlDataAdapter(search);
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                tblFlowers.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            conn.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var response = txtSearch.Text;
+            search(response);
+        }
     }
 }
