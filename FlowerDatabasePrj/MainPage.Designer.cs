@@ -33,6 +33,10 @@
             this.btnShowTypes = new System.Windows.Forms.Button();
             this.lblPickType = new System.Windows.Forms.Label();
             this.cbTypes = new System.Windows.Forms.ComboBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.btnAddFlower = new System.Windows.Forms.Button();
+            this.btnAddType = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblFlowers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +91,52 @@
             this.cbTypes.TabIndex = 4;
             this.cbTypes.SelectedValueChanged += new System.EventHandler(this.cbTypes_SelectedValueChanged);
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(30, 174);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(65, 13);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "Insert name:";
+            // 
+            // tbName
+            // 
+            this.tbName.Location = new System.Drawing.Point(33, 190);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(121, 20);
+            this.tbName.TabIndex = 6;
+            // 
+            // btnAddFlower
+            // 
+            this.btnAddFlower.Location = new System.Drawing.Point(33, 216);
+            this.btnAddFlower.Name = "btnAddFlower";
+            this.btnAddFlower.Size = new System.Drawing.Size(106, 23);
+            this.btnAddFlower.TabIndex = 7;
+            this.btnAddFlower.Text = "Add flower";
+            this.btnAddFlower.UseVisualStyleBackColor = true;
+            this.btnAddFlower.Click += new System.EventHandler(this.btnAddFlower_Click);
+            // 
+            // btnAddType
+            // 
+            this.btnAddType.Enabled = false;
+            this.btnAddType.Location = new System.Drawing.Point(33, 246);
+            this.btnAddType.Name = "btnAddType";
+            this.btnAddType.Size = new System.Drawing.Size(106, 23);
+            this.btnAddType.TabIndex = 8;
+            this.btnAddType.Text = "Add type";
+            this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 450);
+            this.Controls.Add(this.btnAddType);
+            this.Controls.Add(this.btnAddFlower);
+            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.cbTypes);
             this.Controls.Add(this.lblPickType);
             this.Controls.Add(this.btnShowTypes);
@@ -114,5 +159,9 @@
         private System.Windows.Forms.Button btnShowTypes;
         private System.Windows.Forms.Label lblPickType;
         private System.Windows.Forms.ComboBox cbTypes;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Button btnAddFlower;
+        private System.Windows.Forms.Button btnAddType;
     }
 }
