@@ -85,6 +85,7 @@
             this.cbTypes.Name = "cbTypes";
             this.cbTypes.Size = new System.Drawing.Size(121, 21);
             this.cbTypes.TabIndex = 4;
+            this.cbTypes.SelectedValueChanged += new System.EventHandler(this.cbTypes_SelectedValueChanged);
             // 
             // MainPage
             // 

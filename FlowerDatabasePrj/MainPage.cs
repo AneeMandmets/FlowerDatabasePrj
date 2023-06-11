@@ -17,6 +17,7 @@ namespace FlowerDatabasePrj
         string myConnectionString; // String for connection data
         //bool myIsConnected = false; // Boolean value for whether the connection is open or not
         string tableName; // Table name for choosing what data to get from database
+        string id; // id of type
         public MainPage()
         {
             InitializeComponent();
@@ -60,6 +61,17 @@ namespace FlowerDatabasePrj
             tblFlowers.DataSource = dt;
         }
 
+        private void BindGridType()
+        {
+            MySqlCommand data = new MySqlCommand("SELECT * FROM nimi WHERE liik_idliik='" + id + "'", conn);
+            data.CommandType = CommandType.Text;
+            MySqlDataAdapter sda = new MySqlDataAdapter(data);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tblFlowers.DataSource = dt;
+        }
+
         private void btnShowTypes_Click(object sender, EventArgs e)
         {
             tableName= "liigid";
@@ -68,7 +80,7 @@ namespace FlowerDatabasePrj
 
         private void fillComboBox()
         {
-            MySqlCommand options = new MySqlCommand("SELECT liik FROM liigid", conn);
+            MySqlCommand options = new MySqlCommand("SELECT idliik,liik FROM liigid", conn);
             options.CommandType = CommandType.Text;
             MySqlDataAdapter sda = new MySqlDataAdapter(options);
 
@@ -77,8 +89,16 @@ namespace FlowerDatabasePrj
 
             cbTypes.DataSource = dt;
             cbTypes.DisplayMember= "liik";
-            cbTypes.ValueMember = "liik";
+            cbTypes.ValueMember = "idliik";
             
+        }
+
+
+        private void cbTypes_SelectedValueChanged(object sender, EventArgs e)
+        {
+            id = cbTypes.SelectedValue.ToString();
+            Console.WriteLine(id);
+            BindGridType();
         }
     }
 }
