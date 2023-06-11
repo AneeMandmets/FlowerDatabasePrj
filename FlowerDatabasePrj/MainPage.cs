@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using MySqlConnector;
 
 namespace FlowerDatabasePrj
@@ -18,6 +19,7 @@ namespace FlowerDatabasePrj
         //bool myIsConnected = false; // Boolean value for whether the connection is open or not
         string tableName = "nimi"; // Table name for choosing what data to get from database
         string id; // id of type
+        string removableID; // ID for something to be deleted
         public MainPage()
         {
             InitializeComponent();
@@ -160,6 +162,60 @@ namespace FlowerDatabasePrj
             var response = tbName.Text;
             addType(response);
             BindGrid();
+        }
+
+        private void remove()
+        {
+            DatabaseConnection();
+
+            if(tableName == "liigid")
+            {
+                try
+                {
+                    MySqlCommand removing = new MySqlCommand("DELETE FROM liigid WHERE idliik=" + removableID, conn);
+                    removing.CommandType = CommandType.Text;
+                    MySqlDataAdapter sda = new MySqlDataAdapter(removing);
+
+                    MySqlDataReader rdr = removing.ExecuteReader();
+                    while (rdr.Read()) { }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    MySqlCommand removing = new MySqlCommand("DELETE FROM nimi WHERE idnimi=" + removableID, conn);
+                    removing.CommandType = CommandType.Text;
+                    MySqlDataAdapter sda = new MySqlDataAdapter(removing);
+
+                    MySqlDataReader rdr = removing.ExecuteReader();
+                    while (rdr.Read()) { }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            btnRemove.Enabled = false;
+            conn.Close();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            remove();
+            BindGrid();
+        }
+
+        private void tblFlowers_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnRemove.Enabled = true;
+            removableID = tblFlowers.SelectedRows[0].Cells[0].Value.ToString();
+            Console.WriteLine(removableID);
         }
     }
 }

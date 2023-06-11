@@ -37,6 +37,7 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.btnAddFlower = new System.Windows.Forms.Button();
             this.btnAddType = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblFlowers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.tblFlowers.ReadOnly = true;
             this.tblFlowers.Size = new System.Drawing.Size(343, 376);
             this.tblFlowers.TabIndex = 1;
+            this.tblFlowers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tblFlowers_RowHeaderMouseClick);
             // 
             // btnShowTypes
             // 
@@ -109,9 +111,9 @@
             // 
             // btnAddFlower
             // 
-            this.btnAddFlower.Location = new System.Drawing.Point(33, 216);
+            this.btnAddFlower.Location = new System.Drawing.Point(30, 216);
             this.btnAddFlower.Name = "btnAddFlower";
-            this.btnAddFlower.Size = new System.Drawing.Size(106, 23);
+            this.btnAddFlower.Size = new System.Drawing.Size(109, 23);
             this.btnAddFlower.TabIndex = 7;
             this.btnAddFlower.Text = "Add flower";
             this.btnAddFlower.UseVisualStyleBackColor = true;
@@ -120,19 +122,31 @@
             // btnAddType
             // 
             this.btnAddType.Enabled = false;
-            this.btnAddType.Location = new System.Drawing.Point(33, 246);
+            this.btnAddType.Location = new System.Drawing.Point(30, 245);
             this.btnAddType.Name = "btnAddType";
-            this.btnAddType.Size = new System.Drawing.Size(106, 23);
+            this.btnAddType.Size = new System.Drawing.Size(109, 23);
             this.btnAddType.TabIndex = 8;
             this.btnAddType.Text = "Add type";
             this.btnAddType.UseVisualStyleBackColor = true;
             this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Enabled = false;
+            this.btnRemove.Location = new System.Drawing.Point(30, 298);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(109, 23);
+            this.btnRemove.TabIndex = 9;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 450);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAddType);
             this.Controls.Add(this.btnAddFlower);
             this.Controls.Add(this.tbName);
@@ -163,5 +177,6 @@
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Button btnAddFlower;
         private System.Windows.Forms.Button btnAddType;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
