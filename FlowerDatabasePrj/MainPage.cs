@@ -16,6 +16,7 @@ namespace FlowerDatabasePrj
         MySqlConnection conn; // Connection variable
         string myConnectionString; // String for connection data
         //bool myIsConnected = false; // Boolean value for whether the connection is open or not
+        string tableName; // Table name for choosing what data to get from database
         public MainPage()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace FlowerDatabasePrj
         private void MainPage_Load(object sender, EventArgs e)
         {
             DatabaseConnection();
+            fillComboBox();
         }
 
         private void DatabaseConnection()
@@ -43,20 +45,40 @@ namespace FlowerDatabasePrj
 
         private void btnShowFlowers_Click(object sender, EventArgs e)
         {
+            tableName = "nimi";
             BindGrid();
         }
 
         private void BindGrid()
         {
-            MySqlCommand allFlowers = new MySqlCommand("SELECT * FROM nimi", conn);
-            allFlowers.CommandType = CommandType.Text;
-            MySqlDataAdapter sda = new MySqlDataAdapter(allFlowers);
+            MySqlCommand data = new MySqlCommand("SELECT * FROM " + tableName, conn);
+            data.CommandType = CommandType.Text;
+            MySqlDataAdapter sda = new MySqlDataAdapter(data);
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
             tblFlowers.DataSource = dt;
         }
 
-        
+        private void btnShowTypes_Click(object sender, EventArgs e)
+        {
+            tableName= "liigid";
+            BindGrid();
+        }
+
+        private void fillComboBox()
+        {
+            MySqlCommand options = new MySqlCommand("SELECT liik FROM liigid", conn);
+            options.CommandType = CommandType.Text;
+            MySqlDataAdapter sda = new MySqlDataAdapter(options);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            cbTypes.DataSource = dt;
+            cbTypes.DisplayMember= "liik";
+            cbTypes.ValueMember = "liik";
+            
+        }
     }
 }
