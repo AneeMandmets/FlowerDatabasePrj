@@ -44,6 +44,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblCount = new System.Windows.Forms.Label();
+            this.lblChange = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblFlowers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,11 +213,24 @@
             this.lblCount.TabIndex = 13;
             this.lblCount.Text = "Count: ";
             // 
+            // lblChange
+            // 
+            this.lblChange.Enabled = false;
+            this.lblChange.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.Location = new System.Drawing.Point(30, 360);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(109, 29);
+            this.lblChange.TabIndex = 14;
+            this.lblChange.Text = "Change";
+            this.lblChange.UseVisualStyleBackColor = true;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(565, 485);
+            this.Controls.Add(this.lblChange);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -257,5 +271,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Button lblChange;
     }
 }

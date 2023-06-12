@@ -70,7 +70,7 @@ namespace FlowerDatabasePrj
             {
                 tblFlowers.Columns[2].Width = 40;
             } catch(Exception ex) { }
-            lblCount.Text = "Count: " + (tblFlowers.Rows.Count - 1).ToString();
+            lblCount.Text = "Count: " + (tblFlowers.Rows.Count - 1).ToString(); // -1 because database gives the last row as empty
             conn.Close();
         }
 
@@ -225,8 +225,8 @@ namespace FlowerDatabasePrj
         private void tblFlowers_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnRemove.Enabled = true;
-            removableID = tblFlowers.SelectedRows[0].Cells[0].Value.ToString();
-            Console.WriteLine(removableID);
+            //removableID = tblFlowers.SelectedRows[0].Cells[0].Value.ToString();
+            //Console.WriteLine(removableID);
         }
 
         private void search(string name)

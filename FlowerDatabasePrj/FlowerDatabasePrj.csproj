@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Changes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changes.Designer.cs">
+      <DependentUpon>Changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Changes.resx">
+      <DependentUpon>Changes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectionTest.resx">
       <DependentUpon>ConnectionTest.cs</DependentUpon>
     </EmbeddedResource>
