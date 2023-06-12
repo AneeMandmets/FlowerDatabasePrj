@@ -46,9 +46,10 @@
             // 
             // btnShowFlowers
             // 
+            this.btnShowFlowers.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowFlowers.Location = new System.Drawing.Point(30, 45);
             this.btnShowFlowers.Name = "btnShowFlowers";
-            this.btnShowFlowers.Size = new System.Drawing.Size(109, 23);
+            this.btnShowFlowers.Size = new System.Drawing.Size(109, 29);
             this.btnShowFlowers.TabIndex = 0;
             this.btnShowFlowers.Text = "Show flowers";
             this.btnShowFlowers.UseVisualStyleBackColor = true;
@@ -69,9 +70,10 @@
             // 
             // btnShowTypes
             // 
-            this.btnShowTypes.Location = new System.Drawing.Point(30, 76);
+            this.btnShowTypes.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowTypes.Location = new System.Drawing.Point(30, 80);
             this.btnShowTypes.Name = "btnShowTypes";
-            this.btnShowTypes.Size = new System.Drawing.Size(109, 23);
+            this.btnShowTypes.Size = new System.Drawing.Size(109, 29);
             this.btnShowTypes.TabIndex = 2;
             this.btnShowTypes.Text = "Show types";
             this.btnShowTypes.UseVisualStyleBackColor = true;
@@ -80,43 +82,48 @@
             // lblPickType
             // 
             this.lblPickType.AutoSize = true;
-            this.lblPickType.Location = new System.Drawing.Point(30, 117);
+            this.lblPickType.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPickType.Location = new System.Drawing.Point(27, 121);
             this.lblPickType.Name = "lblPickType";
-            this.lblPickType.Size = new System.Drawing.Size(57, 13);
+            this.lblPickType.Size = new System.Drawing.Size(85, 18);
             this.lblPickType.TabIndex = 3;
             this.lblPickType.Text = "Pick type: ";
             // 
             // cbTypes
             // 
             this.cbTypes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbTypes.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTypes.FormattingEnabled = true;
-            this.cbTypes.Location = new System.Drawing.Point(33, 134);
+            this.cbTypes.Location = new System.Drawing.Point(30, 142);
             this.cbTypes.Name = "cbTypes";
-            this.cbTypes.Size = new System.Drawing.Size(121, 21);
+            this.cbTypes.Size = new System.Drawing.Size(121, 26);
             this.cbTypes.TabIndex = 4;
             this.cbTypes.SelectedValueChanged += new System.EventHandler(this.cbTypes_SelectedValueChanged);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(30, 174);
+            this.lblName.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(27, 189);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(65, 13);
+            this.lblName.Size = new System.Drawing.Size(92, 18);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Insert name:";
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(33, 190);
+            this.tbName.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Location = new System.Drawing.Point(30, 210);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(121, 20);
+            this.tbName.Size = new System.Drawing.Size(121, 26);
             this.tbName.TabIndex = 6;
             // 
             // btnAddFlower
             // 
-            this.btnAddFlower.Location = new System.Drawing.Point(30, 216);
+            this.btnAddFlower.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFlower.Location = new System.Drawing.Point(30, 255);
             this.btnAddFlower.Name = "btnAddFlower";
-            this.btnAddFlower.Size = new System.Drawing.Size(109, 23);
+            this.btnAddFlower.Size = new System.Drawing.Size(109, 29);
             this.btnAddFlower.TabIndex = 7;
             this.btnAddFlower.Text = "Add flower";
             this.btnAddFlower.UseVisualStyleBackColor = true;
@@ -125,9 +132,10 @@
             // btnAddType
             // 
             this.btnAddType.Enabled = false;
-            this.btnAddType.Location = new System.Drawing.Point(30, 245);
+            this.btnAddType.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddType.Location = new System.Drawing.Point(30, 290);
             this.btnAddType.Name = "btnAddType";
-            this.btnAddType.Size = new System.Drawing.Size(109, 23);
+            this.btnAddType.Size = new System.Drawing.Size(109, 29);
             this.btnAddType.TabIndex = 8;
             this.btnAddType.Text = "Add type";
             this.btnAddType.UseVisualStyleBackColor = true;
@@ -136,9 +144,10 @@
             // btnRemove
             // 
             this.btnRemove.Enabled = false;
-            this.btnRemove.Location = new System.Drawing.Point(30, 298);
+            this.btnRemove.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(30, 325);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(109, 23);
+            this.btnRemove.Size = new System.Drawing.Size(109, 29);
             this.btnRemove.TabIndex = 9;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -147,24 +156,27 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(30, 437);
+            this.lblSearch.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(27, 441);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(44, 13);
+            this.lblSearch.Size = new System.Drawing.Size(57, 18);
             this.lblSearch.TabIndex = 10;
             this.lblSearch.Text = "Search:";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(83, 434);
+            this.txtSearch.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(90, 441);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(96, 20);
+            this.txtSearch.Size = new System.Drawing.Size(137, 26);
             this.txtSearch.TabIndex = 11;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(204, 432);
+            this.btnSearch.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(246, 439);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(75, 29);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Go";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -174,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 462);
+            this.ClientSize = new System.Drawing.Size(565, 485);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
