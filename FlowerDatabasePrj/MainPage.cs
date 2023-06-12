@@ -29,6 +29,8 @@ namespace FlowerDatabasePrj
         {
             DatabaseConnection();
             fillComboBox();
+            tblFlowers.DefaultCellStyle.Font = new Font("Comic mono", 12);
+            tblFlowers.ColumnHeadersDefaultCellStyle.Font = new Font("Comic mono", 12);
         }
 
         private void DatabaseConnection()
@@ -63,6 +65,12 @@ namespace FlowerDatabasePrj
             DataTable dt = new DataTable();
             sda.Fill(dt);
             tblFlowers.DataSource = dt;
+            tblFlowers.Columns[0].Width = 50;
+            try
+            {
+                tblFlowers.Columns[2].Width = 40;
+            } catch(Exception ex) { }
+            lblCount.Text = "Count: " + (tblFlowers.Rows.Count - 1).ToString();
             conn.Close();
         }
 
@@ -76,6 +84,9 @@ namespace FlowerDatabasePrj
             DataTable dt = new DataTable();
             sda.Fill(dt);
             tblFlowers.DataSource = dt;
+            tblFlowers.Columns[0].Width = 50;
+            tblFlowers.Columns[2].Width = 40;
+            lblCount.Text = "Count: " + (tblFlowers.Rows.Count - 1).ToString();
             conn.Close();
         }
 
@@ -230,6 +241,7 @@ namespace FlowerDatabasePrj
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 tblFlowers.DataSource = dt;
+                lblCount.Text = "Count: " + (tblFlowers.Rows.Count - 1).ToString();
             }
             catch (Exception ex)
             {

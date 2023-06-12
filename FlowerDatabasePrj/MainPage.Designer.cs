@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnShowFlowers = new System.Windows.Forms.Button();
             this.tblFlowers = new System.Windows.Forms.DataGridView();
             this.btnShowTypes = new System.Windows.Forms.Button();
@@ -41,6 +43,7 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.lblCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblFlowers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +63,24 @@
             this.tblFlowers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblFlowers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.tblFlowers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tblFlowers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblFlowers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tblFlowers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblFlowers.DefaultCellStyle = dataGridViewCellStyle2;
             this.tblFlowers.Location = new System.Drawing.Point(188, 45);
             this.tblFlowers.Name = "tblFlowers";
             this.tblFlowers.ReadOnly = true;
@@ -182,11 +202,22 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Comic Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(348, 443);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(57, 18);
+            this.lblCount.TabIndex = 13;
+            this.lblCount.Text = "Count: ";
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 485);
+            this.Controls.Add(this.lblCount);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
@@ -225,5 +256,6 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblCount;
     }
 }
